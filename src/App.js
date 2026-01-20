@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import logo from "./news.jpg";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -74,7 +75,9 @@ function App() {
     });
 
   return (
+    <>
     <div className="container">
+       <img src={logo} alt="Logo" className="logo" />
       <h1>News API Search</h1>
 
       <div className="search">
@@ -94,6 +97,15 @@ function App() {
       <div id="status">{status}</div>
       <div id="results">{renderArticles()}</div>
     </div>
+    <footer>
+        <p>&copy; 2026 Kirils Redkovs. All rights reserved.</p>
+        <nav>
+          <a href="/privacy">Privacy Policy</a> |{" "}
+          <a href="/terms">Terms of Service</a> |{" "}
+          <a href="/contact">Contact Us</a>
+        </nav>
+      </footer>
+    </>
   );
 }
 
