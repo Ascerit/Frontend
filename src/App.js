@@ -16,7 +16,7 @@ function App() {
     setStatus("Loading...");
     try {
       const response = await fetch(
-        `http://localhost:3000/news?q=${encodeURIComponent(query)}`
+        `http://localhost:5000/news?q=${encodeURIComponent(query)}`
       );
       const data = await response.json();
 
